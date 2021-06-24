@@ -5,6 +5,7 @@ class rclone::install {
 
   $_os = $facts['os']['family'] ? {
     /(Debian|Ubuntu)/ => 'linux',
+    /(RedHat)/        => 'linux',
     default           => fail("Unsupported OS family ${facts['os']['family']}"),
   }
 
